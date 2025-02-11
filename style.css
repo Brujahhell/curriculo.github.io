@@ -1,0 +1,141 @@
+.container{
+    margin: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.lista{
+    width: 25%;
+    height: auto;
+    background-color: #565659;
+}
+.info{
+    margin-left: 1%;
+    margin-right: 0%;
+    width: 72%;
+    height: auto;
+}
+.foto {
+    width: 250px; /* Largura do círculo */
+    height: 250px; /* Altura do círculo */
+    border-radius: 50%; /* Faz a div ficar redonda */
+    overflow: hidden; /* Esconde partes da imagem que saem do círculo */
+    background-color: white;
+    align-content: center;
+    margin: 2% auto; /* Centraliza a div da foto e adiciona espaçamento abaixo */
+}
+
+.foto img {
+    width: 100%; /* Faz a imagem ocupar toda a div */
+    height: auto; /* Mantém a proporção da imagem */
+}
+.container2{
+    margin: 4%;
+}
+.titulo{
+    margin: 2%;
+    width: 100%;
+    height: auto;
+    font-size: 200%;
+}
+.titulo2{
+    margin: 1%;
+    width: 100%;
+    height: auto;
+    font-size: 150%;
+    font-weight: bold;
+}
+.icons{
+    width: 5%;
+    height: 5%;
+    margin-right: 1%;
+}
+.exp{
+    margin-top: 5%;
+}
+.educ{
+    margin-top: 3%;
+}
+.cert{
+    margin-top: 1%;
+}
+.refer{
+    margin-top: 10%;
+}
+.linha{
+    display: flex;
+}
+a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: black; /* Define a cor do link */
+}
+a:visited {
+    color: white; /* Altere para a cor desejada */
+}
+a:hover {
+    color: blue; /* Altere para a cor desejada */
+}
+.espec{
+    width: 100%;
+    height: auto;
+    margin: 1%;
+    font-size: 90%;
+    font-weight: normal;
+}
+.colorname{
+    color: white;
+}
+ul li{
+    margin: 1%;
+    font-size: 120%;
+    font-weight: bold;
+}
+.quadros {
+    width: 95%;
+    height: auto;
+    font-size: 115%;
+    line-height: 150%;
+}
+.nome{
+    width: 100%;
+    height: auto;
+    font-size: 300%;
+}
+.divisao{
+    width: 100%;
+    margin-top: 2%;
+}
+.negrito{
+    font-weight: bold;
+}
+.sublinhado{
+    text-decoration: underline;
+}
+.noli{
+    margin: 1%;
+    font-size: 90%;
+}
+.espaçamento{
+    margin-left: 5%;
+}
+.conteudoEmpresa {
+    display: none; /* Esconde o conteúdo inicialmente */
+    background-color: #9ca3af;
+}
+.empresa {
+    cursor: pointer; /* Mostra o cursor de mão para indicar que é clicável */
+    color: black;
+    text-decoration: none;
+}
+.grade_cursos{
+    flex-wrap: wrap;
+    width: 20%;
+    margin: 1%;
+    transition: transform 0.3s ease; /*Fazer a transição suave de aumentar*/
+}
+.grade_cursos:hover{
+    transform: scale(2.2); /* Aumenta a imagem em 220% */
+}
+.obs{
+    font-size: xx-small;
+}
