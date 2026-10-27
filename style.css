@@ -1,141 +1,354 @@
-.container{
+
+/* Configurações gerais */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
     margin: 0;
     width: 100%;
-    height: auto;
+    min-height: 100vh;
     display: flex;
+    align-items: stretch;
 }
-.lista{
+
+/* Coluna lateral */
+.lista {
     width: 25%;
-    height: auto;
+    min-width: 250px;
     background-color: #565659;
+    padding: 20px;
 }
-.info{
-    margin-left: 1%;
-    margin-right: 0%;
-    width: 72%;
-    height: auto;
+
+/* Conteúdo principal */
+.info {
+    flex: 1;
+    min-width: 0;
+    padding: 20px;
 }
+
+/* Foto de perfil */
 .foto {
-    width: 250px; /* Largura do círculo */
-    height: 250px; /* Altura do círculo */
-    border-radius: 50%; /* Faz a div ficar redonda */
-    overflow: hidden; /* Esconde partes da imagem que saem do círculo */
+    width: 250px;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    overflow: hidden;
     background-color: white;
-    align-content: center;
-    margin: 2% auto; /* Centraliza a div da foto e adiciona espaçamento abaixo */
+    margin: 2% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .foto img {
-    width: 100%; /* Faz a imagem ocupar toda a div */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.container2{
+
+/* Espaçamentos */
+.container2 {
     margin: 4%;
 }
-.titulo{
-    margin: 2%;
+
+.exp {
+    margin-top: 5%;
+}
+
+.educ {
+    margin-top: 3%;
+}
+
+.cert {
+    margin-top: 1%;
+}
+
+.refer {
+    margin-top: 10%;
+}
+
+/* Títulos */
+.titulo {
+    margin: 2% 0;
     width: 100%;
-    height: auto;
     font-size: 200%;
 }
-.titulo2{
-    margin: 1%;
+
+.titulo2 {
+    margin: 1% 0;
     width: 100%;
-    height: auto;
     font-size: 150%;
     font-weight: bold;
 }
-.icons{
-    width: 5%;
-    height: 5%;
-    margin-right: 1%;
-}
-.exp{
-    margin-top: 5%;
-}
-.educ{
-    margin-top: 3%;
-}
-.cert{
-    margin-top: 1%;
-}
-.refer{
-    margin-top: 10%;
-}
-.linha{
-    display: flex;
-}
-a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: black; /* Define a cor do link */
-}
-a:visited {
-    color: white; /* Altere para a cor desejada */
-}
-a:hover {
-    color: blue; /* Altere para a cor desejada */
-}
-.espec{
+
+.nome {
     width: 100%;
-    height: auto;
-    margin: 1%;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    overflow-wrap: anywhere;
+}
+
+/* Ícones e linhas */
+.icons {
+    width: 24px;
+    height: 24px;
+    max-width: 100%;
+    object-fit: contain;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.linha {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    min-width: 0;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: black;
+    overflow-wrap: anywhere;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:hover {
+    color: blue;
+}
+
+/* Textos */
+.espec {
+    width: 100%;
+    margin: 1% 0;
     font-size: 90%;
     font-weight: normal;
 }
-.colorname{
+
+.colorname {
     color: white;
 }
-ul li{
+
+ul {
+    padding-left: 22px;
+}
+
+ul li {
     margin: 1%;
     font-size: 120%;
     font-weight: bold;
 }
+
 .quadros {
-    width: 95%;
-    height: auto;
-    font-size: 115%;
-    line-height: 150%;
-}
-.nome{
     width: 100%;
-    height: auto;
-    font-size: 300%;
+    font-size: 115%;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
 }
-.divisao{
+
+.divisao {
     width: 100%;
     margin-top: 2%;
 }
-.negrito{
+
+.negrito {
     font-weight: bold;
 }
-.sublinhado{
+
+.sublinhado {
     text-decoration: underline;
 }
-.noli{
+
+.noli {
     margin: 1%;
     font-size: 90%;
 }
-.espaçamento{
+
+.espaçamento {
     margin-left: 5%;
 }
+
+/* Empresas expansíveis */
 .conteudoEmpresa {
-    display: none; /* Esconde o conteúdo inicialmente */
+    display: none;
     background-color: #9ca3af;
+    padding: 10px;
 }
+
 .empresa {
-    cursor: pointer; /* Mostra o cursor de mão para indicar que é clicável */
+    cursor: pointer;
     color: black;
     text-decoration: none;
 }
-.grade_cursos{
-    flex-wrap: wrap;
+
+/* Grade de cursos */
+.grade_cursos {
     width: 20%;
+    min-width: 100px;
+    max-width: 180px;
     margin: 1%;
-    transition: transform 0.3s ease; /*Fazer a transição suave de aumentar*/
+    transition: transform 0.3s ease;
 }
-.grade_cursos:hover{
-    transform: scale(2.2); /* Aumenta a imagem em 220% */
+
+.grade_cursos img {
+    max-width: 100%;
+    height: auto;
 }
-.obs{
+
+.grade_cursos:hover {
+    transform: scale(1.1);
+}
+
+.obs {
     font-size: xx-small;
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .lista {
+        width: 100%;
+        min-width: 0;
+        padding: 20px;
+    }
+
+    .info {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .foto {
+        width: 200px;
+    }
+
+    .titulo {
+        font-size: 180%;
+    }
+
+    .titulo2 {
+        font-size: 140%;
+    }
+
+    .grade_cursos {
+        width: 28%;
+    }
+
+    .refer {
+        margin-top: 5%;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .lista,
+    .info {
+        width: 100%;
+        min-width: 0;
+        padding: 15px;
+    }
+
+    .foto {
+        width: 160px;
+        margin: 15px auto;
+    }
+
+    .container2 {
+        margin: 3%;
+    }
+
+    .titulo {
+        font-size: 1.5rem;
+        margin: 12px 0;
+    }
+
+    .titulo2 {
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
+
+    .nome {
+        font-size: 2rem;
+    }
+
+    .icons {
+        width: 20px;
+        height: 20px;
+    }
+
+    .linha {
+        gap: 6px;
+    }
+
+    .quadros {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .espec {
+        font-size: 0.9rem;
+    }
+
+    ul li {
+        font-size: 1rem;
+        margin: 8px 0;
+    }
+
+    .espaçamento {
+        margin-left: 0;
+    }
+
+    .grade_cursos {
+        width: 44%;
+        min-width: 0;
+        max-width: none;
+        margin: 2%;
+    }
+
+    .grade_cursos:hover {
+        transform: scale(1.03);
+    }
+
+    .exp,
+    .educ,
+    .cert,
+    .refer {
+        margin-top: 20px;
+    }
+}
+
+/* Celulares muito estreitos */
+@media (max-width: 360px) {
+    .lista,
+    .info {
+        padding: 10px;
+    }
+
+    .foto {
+        width: 130px;
+    }
+
+    .nome {
+        font-size: 1.7rem;
+    }
+
+    .grade_cursos {
+        width: 100%;
+        margin: 10px 0;
+    }
 }
